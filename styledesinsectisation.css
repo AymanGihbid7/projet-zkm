@@ -1,0 +1,280 @@
+/* VARIABLES */
+:root {
+  --primary: #D72C2F;        /* Rouge vif */
+  --secondary: #8B0000;      /* Rouge foncé */
+  --accent: #FFD700;         /* Couleur accent (hover) */
+  --white: #fff;
+  --text-color: #444;
+  --bg-color: #f7f7f7;       /* Fond clair */
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE & TYPOGRAPHIE */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 20px 5%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
+}
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+header ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+header ul li a:hover,
+header ul li a.active {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+.contact-btn button {
+  background: linear-gradient(135deg, #000, #333);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.contact-btn button:hover {
+  background: linear-gradient(135deg, #333, #000);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* HERO SECTION - LOGO en arrière-plan */
+#hero-desinsectisation {
+  background: url('assets/logo.jpg') no-repeat center/cover;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+#hero-desinsectisation::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+.hero-desinsectisation-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+#hero-desinsectisation h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+#hero-desinsectisation p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  background-color: #B2181B;
+  transform: translateY(-3px);
+}
+
+/* SECTION CONTENU */
+.about-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 5%;
+  background-color: var(--white);
+}
+.about-content h2 {
+  font-size: 28px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  text-align: left;
+  position: relative;
+}
+.about-content h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+.about-content p,
+.about-content ul {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.about-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* CARDS AVEC IMAGES (3 au total) */
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.card .text {
+  flex: 1 1 50%;
+  color: white;
+  padding-right: 20px;
+}
+.card .text h4 {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.card .text p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.card .image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+.card .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  border-left: 4px solid var(--primary);
+  max-height: 300px; /* Ajuste si tu veux limiter la hauteur max */
+}
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  .card .image img {
+    border-left: none;
+    border-top: 4px solid var(--primary);
+    margin-top: 20px;
+    max-height: unset; /* Autorise plus de hauteur si besoin sur mobile */
+  }
+}
+
+/* CTA-BUTTON */
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #B2181B;
+  transform: translateY(-3px);
+}
+
+/* SECTION CTA */
+#cta-desinsectisation {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 5%;
+}
+#cta-desinsectisation h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+#cta-desinsectisation p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 5%;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+  }
+  header ul {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  #hero-desinsectisation {
+    height: 400px;
+  }
+  #hero-desinsectisation h1 {
+    font-size: 32px;
+  }
+  #hero-desinsectisation p {
+    font-size: 18px;
+  }
+  .about-content {
+    padding: 20px 5%;
+  }
+  #cta-desinsectisation {
+    padding: 40px 5%;
+  }
+  #cta-desinsectisation h2 {
+    font-size: 26px;
+  }
+  #cta-desinsectisation p {
+    font-size: 16px;
+  }
+}

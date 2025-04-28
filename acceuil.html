@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZKM Experts - Accueil</title>
+  <!-- Favicon -->
+  <link rel="icon" 
+        type="image/jpg" 
+        sizes="32x32" 
+        href="assets/logo.jpg" />
+  <link rel="stylesheet" href="styleacceuil.css" />
+  <!-- Optionnel : Importer une police moderne -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="assets/logo.jpg" alt="Logo ZKM Experts" />
+      </div>
+      <ul>
+        <li><a href="acceuil.html">Accueil</a></li>
+        <li><a href="a propos.html">À propos</a></li>
+        <li><a href="desinfection.html">Désinfection</a></li>
+        <li><a href="deratisation.html">Dératisation</a></li>
+        <li><a href="desinsectisation.html">Désinsectisation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="contact-btn">
+        <button onclick="alert('Appelez-nous au : 0783840368')">Appelez-nous</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION (avec l'image insect.avif en background) -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Votre environnement, notre mission</h1>
+      <p>Expertise, innovation et engagement pour un cadre de vie sain et sécurisé.</p>
+      <a href="contact.html" class="btn">Demandez un devis gratuit</a>
+    </div>
+  </section>
+
+  <!-- PRÉSENTATION -->
+  <section id="presentation">
+    <div class="presentation-content">
+      <h2>Bienvenue chez ZKM Experts</h2>
+      <p>
+        Forts de nombreuses années d’expérience, nous mettons tout en œuvre pour offrir des interventions rapides,
+        efficaces et respectueuses de l’environnement. Découvrez nos services et engagez-vous avec une équipe dédiée.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES EN VEDETTE -->
+  <section id="services">
+    <h2>Nos Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="assets/sra9 zit.jpg" alt="Désinsectisation" />
+        <h3>Désinsectisation</h3>
+        <p>Interventions rapides contre punaises de lit, cafards, mites et autres nuisibles.</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/toba.jpg" alt="Dératisation" />
+        <h3>Dératisation</h3>
+        <p>Traitements ciblés pour éliminer rats, souris et rongeurs, tout en respectant l'environnement.</p>
+      </div>
+      <div class="service-card">
+        <img src="assets/rzozi.jpg" alt="Désinfection" />
+        <h3>Désinfection</h3>
+        <p>Nettoyage et désinfection post-intervention pour garantir un cadre de vie sain.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTES EXISTANTES -->
+  <section id="accueil-cards">
+    <!-- Carte 1 : Notre mission -->
+    <div class="card-group">
+      <div class="card">
+        <div class="card-image">
+          <img src="assets/acceuil1.jpg" alt="Technicien en intervention" />
+        </div>
+        <div class="card-content">
+          <h2>Notre mission</h2>
+          <p>
+            Nous nous engageons à créer des environnements sains, sécurisés et propres pour nos clients.
+            Notre équipe d'experts intervient avec des solutions innovantes et respectueuses de l'environnement.
+          </p>
+          <h3>Nos domaines d’intervention</h3>
+          <ul>
+            <li><strong>Désinsectisation :</strong> punaises de lit, cafards, mites, etc.</li>
+            <li><strong>Dératisation :</strong> rats, souris et autres nuisibles.</li>
+            <li><strong>Désinfection :</strong> nettoyage post-intervention ou sinistre.</li>
+            <li><strong>Intervention nationale :</strong> équipes mobiles dans toute la France.</li>
+          </ul>
+          <p class="extra-info">
+            Nos interventions s’appuient sur des techniques modernes et des produits certifiés.
+          </p>
+          <a href="a propos.html" class="btn">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carte 2 : Pourquoi choisir ZKM Experts ? -->
+    <div class="card-group">
+      <div class="card">
+        <div class="card-image">
+          <img src="assets/acceuil2.jpg" alt="ZKM Experts en action" />
+        </div>
+        <div class="card-content">
+          <h2>Pourquoi choisir ZKM Experts ?</h2>
+          <p>
+            Nos professionnels certifiés mettent leur expertise au service de votre sécurité et de votre bien-être.
+            La satisfaction client est notre priorité.
+          </p>
+          <ul>
+            <li>Expertise et certifications reconnues</li>
+            <li>Solutions adaptées et durables</li>
+            <li>Produits et méthodes écoresponsables</li>
+            <li>Service discret et respectueux</li>
+            <li>Devis gratuit et intervention rapide</li>
+          </ul>
+          <p class="extra-info">
+            Chaque intervention est réalisée sur-mesure pour garantir un service complet et transparent.
+          </p>
+          <a href="contact.html" class="btn">Contactez-nous</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAROUSEL À PROPOS -->
+  <section id="a-propos-carousel">
+    <h1> ZKM Experts Plus 5ans d'Expérience Dans Le Domaine</h1>
+    <p>Découvrez en images nos valeurs, notre équipe et notre approche innovante.</p>
+
+    <div class="carousel-container">
+      <button class="carousel-btn prev-btn">&#10094;</button>
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <!-- Slide 1 -->
+          <li class="carousel-slide current-slide">
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/apropos1.jpg" alt="Valeurs & Engagement" />
+              </div>
+              <div class="card-content">
+                <h2>Valeurs & Engagement</h2>
+                <p>
+                  La confiance, la transparence et le respect de l'environnement guident chacune de nos actions.
+                  Nous nous engageons pour un service responsable et efficace.
+                </p>
+              </div>
+            </div>
+          </li>
+          <!-- Slide 2 -->
+          <li class="carousel-slide">
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/apropos2.jpg" alt="Notre Équipe" />
+              </div>
+              <div class="card-content">
+                <h2>Notre Équipe</h2>
+                <p>
+                  Nos experts passionnés mettent leur savoir-faire au service de votre sécurité.
+                  Chaque membre contribue activement à notre succès.
+                </p>
+              </div>
+            </div>
+          </li>
+          <!-- Slide 3 -->
+          <li class="carousel-slide">
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/apropos3.jpg" alt="Technologies & Innovations" />
+              </div>
+              <div class="card-content">
+                <h2>Technologies & Innovations</h2>
+                <p>
+                  Nous investissons dans des solutions de pointe pour garantir un service rapide et performant.
+                  L'innovation est le moteur de notre compétitivité.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="carousel-btn next-btn">&#10095;</button>
+      <div class="carousel-nav">
+        <button class="current-slide"></button>
+        <button></button>
+        <button></button>
+      </div>
+    </div>
+  </section>
+  <!-- AVIS CLIENTS -->
+  <section id="avis">
+    <h2>Votre avis nous intéresse !</h2>
+
+    <form id="avis-form">
+      <!-- Note + message -->
+      <div class="form-group">
+        <label for="rating-value">Votre note :</label>
+        <div class="rating">
+          <span class="star" data-value="1">&#9733;</span>
+          <span class="star" data-value="2">&#9733;</span>
+          <span class="star" data-value="3">&#9733;</span>
+          <span class="star" data-value="4">&#9733;</span>
+          <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <input type="hidden" id="rating-value" value="0" />
+        <p id="rating-text" class="rating-text"></p>
+      </div>
+
+      <!-- Texte de l’avis -->
+      <div class="form-group">
+        <label for="avis-input">Votre avis :</label>
+        <textarea id="avis-input" placeholder="Écrivez votre avis..." required></textarea>
+      </div>
+
+      <!-- Nom -->
+      <div class="form-group">
+        <label for="nom-input">Votre nom :</label>
+        <input type="text" id="nom-input" placeholder="Anonyme si vide" />
+      </div>
+
+      <!-- Bouton -->
+      <div class="form-group">
+        <button type="submit">Envoyer</button>
+      </div>
+    </form>
+
+    <div id="avis-list"><!-- avis persistés s’afficheront ici --></div>
+  </section>
+  <!-- APPEL À L'ACTION FINAL -->
+  <section id="cta">
+    <h2>Prêt à transformer votre environnement ?</h2>
+    <p>Contactez-nous dès aujourd'hui pour un devis gratuit ou pour obtenir plus d'informations.</p>
+    <a href="contact.html" class="btn">Contactez-nous</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 ZKM Experts - Tous droits réservés</p>
+  </footer>
+
+  <!-- SCRIPT JS POUR LE CAROUSEL -->
+  <script>
+    // Sélection des éléments du carousel
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.next-btn');
+    const prevButton = document.querySelector('.prev-btn');
+    const navDots = Array.from(document.querySelector('.carousel-nav').children);
+
+    // Récupérer la largeur d'un slide
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    // Positionner chaque slide horizontalement
+    slides.forEach((slide, index) => {
+      slide.style.left = slideWidth * index + 'px';
+    });
+
+    // Fonction de déplacement du carousel
+    function moveToSlide(currentSlide, targetSlide) {
+      track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+      currentSlide.classList.remove('current-slide');
+      targetSlide.classList.add('current-slide');
+    }
+
+    // Mise à jour des indicateurs
+    function updateDots(currentDot, targetDot) {
+      currentDot.classList.remove('current-slide');
+      targetDot.classList.add('current-slide');
+    }
+
+    // Masquage/Affichage des flèches selon l'index
+    function hideShowArrows(targetIndex) {
+      if (targetIndex === 0) {
+        prevButton.classList.add('is-hidden');
+      } else {
+        prevButton.classList.remove('is-hidden');
+      }
+      if (targetIndex === slides.length - 1) {
+        nextButton.classList.add('is-hidden');
+      } else {
+        nextButton.classList.remove('is-hidden');
+      }
+    }
+
+    // Clic sur "Suivant"
+    nextButton.addEventListener('click', () => {
+      const currentSlide = track.querySelector('.current-slide');
+      const nextSlide = currentSlide.nextElementSibling;
+      const currentDot = document.querySelector('.carousel-nav .current-slide');
+      const nextDot = currentDot.nextElementSibling;
+      const nextIndex = slides.findIndex(slide => slide === nextSlide);
+
+      if (nextSlide) {
+        moveToSlide(currentSlide, nextSlide);
+        updateDots(currentDot, nextDot);
+        hideShowArrows(nextIndex);
+      }
+    });
+
+    // Clic sur "Précédent"
+    prevButton.addEventListener('click', () => {
+      const currentSlide = track.querySelector('.current-slide');
+      const prevSlide = currentSlide.previousElementSibling;
+      const currentDot = document.querySelector('.carousel-nav .current-slide');
+      const prevDot = currentDot.previousElementSibling;
+      const prevIndex = slides.findIndex(slide => slide === prevSlide);
+
+      if (prevSlide) {
+        moveToSlide(currentSlide, prevSlide);
+        updateDots(currentDot, prevDot);
+        hideShowArrows(prevIndex);
+      }
+    });
+
+    // Navigation par les puces
+    navDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        const currentSlide = track.querySelector('.current-slide');
+        const currentDot = document.querySelector('.carousel-nav .current-slide');
+        const targetSlide = slides[index];
+        moveToSlide(currentSlide, targetSlide);
+        updateDots(currentDot, dot);
+        hideShowArrows(index);
+      });
+    });
+
+    // Initialisation
+    hideShowArrows(0);
+  </script>
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const stars       = document.querySelectorAll('#avis .star');
+      const ratingInput = document.getElementById('rating-value');
+      const ratingText  = document.getElementById('rating-text');
+      const form        = document.getElementById('avis-form');
+      const avisInput   = document.getElementById('avis-input');
+      const nomInput    = document.getElementById('nom-input');
+      const avisList    = document.getElementById('avis-list');
+
+      // Messages selon la note
+      const notesMsg = {
+        1: "Médiocre",
+        2: "Passable",
+        3: "Bon",
+        4: "Très Bon",
+        5: "Excellente"
+      };
+
+      let currentRating = 0;
+      let storedAvis = JSON.parse(localStorage.getItem('avisData') || '[]');
+
+      // Affiche un avis dans la page
+      function displayAvis({rating, text, name}, prepend = true) {
+        const item = document.createElement('div');
+        item.classList.add('avis-item');
+        // étoiles affichées
+        let starsHTML = '';
+        for (let i = 1; i <= 5; i++) {
+          starsHTML += `<span class="star-display${i <= rating ? ' selected' : ''}">&#9733;</span>`;
+        }
+        item.innerHTML = `
+          <div class="stars-display">${starsHTML}</div>
+          <p>"${text}"</p>
+          <h4>– ${name}</h4>
+        `;
+        prepend ? avisList.prepend(item) : avisList.append(item);
+      }
+
+      // Charger les avis enregistrés
+      storedAvis.forEach(av => displayAvis(av, false));
+
+      // Gérer hover et sélection d’étoile
+      stars.forEach(star => {
+        star.addEventListener('mouseover', () => {
+          const val = +star.dataset.value;
+          stars.forEach(s => s.classList.toggle('hover', +s.dataset.value <= val));
+        });
+        star.addEventListener('mouseout', () => {
+          stars.forEach(s => s.classList.remove('hover'));
+        });
+        star.addEventListener('click', () => {
+          currentRating = +star.dataset.value;
+          ratingInput.value = currentRating;
+          ratingText.textContent = notesMsg[currentRating];
+          stars.forEach(s => s.classList.toggle('selected', +s.dataset.value <= currentRating));
+        });
+      });
+
+      // Soumission du formulaire
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const text   = avisInput.value.trim();
+        const name   = nomInput.value.trim() || 'Anonyme';
+        const rating = +ratingInput.value;
+        if (!text || rating < 1) return;  // on exige au moins 1 étoile et un texte
+
+        const newAvis = { rating, text, name };
+        storedAvis.unshift(newAvis);
+        localStorage.setItem('avisData', JSON.stringify(storedAvis));
+        displayAvis(newAvis, true);
+
+        // reset
+        avisInput.value = '';
+        nomInput.value  = '';
+        currentRating   = 0;
+        ratingInput.value = 0;
+        ratingText.textContent = '';
+        stars.forEach(s => s.classList.remove('selected'));
+      });
+    });
+  </script>
+</body>
+</html>

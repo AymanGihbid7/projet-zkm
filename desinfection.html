@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZKM Experts - Désinfection</title>
+  <!-- Favicon -->
+  <link rel="icon" 
+        type="image/jpg" 
+        sizes="32x32" 
+        href="assets/logo.jpg" />
+  <link rel="stylesheet" href="styledesinfection.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="assets/logo.jpg" alt="Logo ZKM Experts" />
+      </div>
+      <ul>
+        <li><a href="acceuil.html">Accueil</a></li>
+        <li><a href="a propos.html">À propos</a></li>
+        <li><a href="desinfection.html" class="active">Désinfection</a></li>
+        <li><a href="deratisation.html">Dératisation</a></li>
+        <li><a href="desinsectisation.html">Désinsectisation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="contact-btn">
+        <button onclick="alert('Appelez-nous au : 0783840368')">Appelez-nous</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero-desinfection">
+    <div class="hero-desinfection-content">
+      <h1>Désinfection Professionnelle</h1>
+      <p>Des solutions fiables pour un environnement sain et sécurisé</p>
+      <a href="#desinfection-content" class="btn">Demandez un devis gratuit</a>
+    </div>
+  </section>
+
+  <!-- CONTENU PRINCIPAL -->
+  <section id="desinfection-content" class="content-section">
+    <h2>Pourquoi désinfecter ?</h2>
+    <p>
+      La désinfection est essentielle pour éliminer les germes, bactéries, virus et autres contaminants susceptibles de nuire à la santé. 
+      Qu'il s'agisse d'une intervention post-infestation, post-sinistre ou de prévention, un traitement complet garantit un environnement sûr pour tous.
+    </p>
+    <h3>Nos interventions de désinfection :</h3>
+    <ul>
+      <li><strong>Désinfection après infestation :</strong> intervention suite à la présence de nuisibles.</li>
+      <li><strong>Traitement des locaux insalubres :</strong> pour éliminer les contaminants accumulés.</li>
+      <li><strong>Intervention post-sinistre :</strong> nettoyage après incendie, inondation ou autre sinistre.</li>
+      <li><strong>Prévention épidémique :</strong> limiter la propagation d'agents pathogènes.</li>
+    </ul>
+
+    <div class="desinfection-row">
+      <div class="desinfection-text">
+        <h3>Enjeux et méthodologie</h3>
+        <p>
+          Nos techniciens analysent minutieusement chaque lieu pour adapter le protocole de désinfection. 
+          Qu’il s’agisse de pulvérisation, de nébulisation ou de fumigation, chaque méthode est choisie en fonction de la contamination observée.
+        </p>
+      </div>
+    </div>
+
+    <h3>Les bénéfices d’une désinfection efficace :</h3>
+    <ul>
+      <li><strong>Protection sanitaire :</strong> élimination des agents pathogènes pour une meilleure sécurité.</li>
+      <li><strong>Sérénité et bien-être :</strong> un environnement propre améliore la qualité de vie.</li>
+      <li><strong>Image professionnelle :</strong> des locaux soignés renforcent la confiance des clients.</li>
+      <li><strong>Prévention durable :</strong> réduction des risques de réinfestation.</li>
+    </ul>
+  </section>
+
+  <!-- CAROUSEL INFECTION -->
+  <section id="infection-carousel">
+    <h2>Exemples d'infection dans les locaux</h2>
+    <button class="carousel-btn prev-btn infection">&lt;</button>
+    <div class="carousel-track-container infection">
+      <ul class="carousel-track infection">
+        <li class="infection-slide current-slide">
+          <img src="assets/infection1.jpg" alt="Infection 1">
+          <p><strong>Infection 1 :</strong> Environnement fortement contaminé, nécessitant une intervention urgente.</p>
+        </li>
+        <li class="infection-slide">
+          <img src="assets/infection2.jpg" alt="Infection 2">
+          <p><strong>Infection 2 :</strong> Propagation des agents pathogènes dans un milieu urbain.</p>
+        </li>
+        <li class="infection-slide">
+          <img src="assets/infection3.jpg" alt="Infection 3">
+          <p><strong>Infection 3 :</strong> Contamination persistante nécessitant un traitement en profondeur.</p>
+        </li>
+      </ul>
+    </div>
+    <button class="carousel-btn next-btn infection">&gt;</button>
+    <div class="carousel-nav infection">
+      <button class="current-slide"></button>
+      <button></button>
+      <button></button>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta-desinfection">
+    <h2>Besoin d'une désinfection ?</h2>
+    <p>
+      Contactez-nous dès aujourd'hui pour un devis gratuit ou pour obtenir plus d'informations sur nos services.
+    </p>
+    <a href="contact.html" class="btn">Contactez-nous</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 ZKM Experts – Tous droits réservés</p>
+  </footer>
+
+  <!-- SCRIPT CAROUSEL -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const track      = document.querySelector('.carousel-track.infection');
+      const slides     = Array.from(track.children);
+      const nextBtn    = document.querySelector('.next-btn.infection');
+      const prevBtn    = document.querySelector('.prev-btn.infection');
+      const nav        = document.querySelector('.carousel-nav.infection');
+      const dots       = Array.from(nav.children);
+      const slideWidth = slides[0].getBoundingClientRect().width;
+
+      slides.forEach((slide,i) => slide.style.left = slideWidth*i + 'px');
+
+      function moveToSlide(cur, tgt) {
+        track.style.transform = 'translateX(-'+tgt.style.left+')';
+        cur.classList.remove('current-slide');
+        tgt.classList.add('current-slide');
+      }
+      function updateDots(curDot, tgtDot) {
+        curDot.classList.remove('current-slide');
+        tgtDot.classList.add('current-slide');
+      }
+      function updateArrows(idx) {
+        prevBtn.style.display = idx===0? 'none':'block';
+        nextBtn.style.display = idx===slides.length-1? 'none':'block';
+      }
+
+      nextBtn.addEventListener('click', () => {
+        const cur = track.querySelector('.current-slide');
+        const nxt = cur.nextElementSibling; if(!nxt) return;
+        const curDot = nav.querySelector('.current-slide');
+        const nxtDot = curDot.nextElementSibling;
+        const nxtIdx = slides.indexOf(nxt);
+        moveToSlide(cur, nxt);
+        updateDots(curDot, nxtDot);
+        updateArrows(nxtIdx);
+      });
+      prevBtn.addEventListener('click', () => {
+        const cur = track.querySelector('.current-slide');
+        const prv = cur.previousElementSibling; if(!prv) return;
+        const curDot = nav.querySelector('.current-slide');
+        const prvDot = curDot.previousElementSibling;
+        const prvIdx = slides.indexOf(prv);
+        moveToSlide(cur, prv);
+        updateDots(curDot, prvDot);
+        updateArrows(prvIdx);
+      });
+      nav.addEventListener('click', e => {
+        const tgtDot = e.target.closest('button'); if(!tgtDot) return;
+        const cur = track.querySelector('.current-slide');
+        const curDot = nav.querySelector('.current-slide');
+        const idx = dots.indexOf(tgtDot);
+        const tgt = slides[idx];
+        moveToSlide(cur, tgt);
+        updateDots(curDot, tgtDot);
+        updateArrows(idx);
+      });
+      updateArrows(0);
+    });
+  </script>
+</body>
+</html>

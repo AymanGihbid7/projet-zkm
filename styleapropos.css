@@ -1,0 +1,310 @@
+/* VARIABLES */
+:root {
+  --primary: #D72C2F;        /* Rouge vif */
+  --secondary: #8B0000;      /* Rouge foncé */
+  --accent: #FFD700;         /* Doré pour survol */
+  --white: #fff;
+  --text-color: #444;
+  --bg-color: #fdfdfd;       /* Fond très clair */
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE & TYPOGRAPHIE */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 20px 5%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
+}
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+header ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+header ul li a:hover,
+header ul li a.active {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+.contact-btn button {
+  background: linear-gradient(135deg, #000, #333);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.contact-btn button:hover {
+  background: linear-gradient(135deg, #333, #000);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* HERO SECTION */
+#hero-about {
+  background: url('assets/insect.avif') no-repeat center/cover;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+#hero-about::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hero-about-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+#hero-about h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+#hero-about p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  background-color: #B2181B;
+  transform: translateY(-3px);
+}
+
+/* SECTION À PROPOS */
+.professional-about {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px 5%;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.about-block {
+  margin-bottom: 40px;
+}
+.about-block h2 {
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+}
+.about-block h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+.about-block p,
+.about-block ul {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.about-block ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* GALERIE D'IMAGES EN GRID STYLÉE */
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: white;
+}
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.gallery-item:hover::before {
+  opacity: 1;
+}
+.gallery-item:hover img {
+  transform: scale(1.1) rotate(1deg);
+}
+/* Caption sous l'image */
+.gallery-item .caption {
+  margin-top: 12px;
+  padding: 0 8px 12px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+.gallery-item:hover .caption {
+  color: var(--accent);
+}
+
+/* CTA-BUTTON */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #B2181B;
+  transform: translateY(-3px);
+}
+
+/* NOUVELLE SECTION CTA (FOND ROUGE) */
+#cta-about {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 5%;
+}
+#cta-about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+#cta-about p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.cta-about-button {
+  display: inline-block;
+  background-color: var(--white);
+  color: var(--primary);
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.cta-about-button:hover {
+  background-color: #B2181B;
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+/* FOOTER */
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 5%;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+  }
+  header ul {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  #hero-about {
+    height: 400px;
+  }
+  #hero-about h1 {
+    font-size: 32px;
+  }
+  #hero-about p {
+    font-size: 18px;
+  }
+  .professional-about {
+    padding: 20px 5%;
+    margin: 20px auto;
+  }
+  .about-gallery {
+    grid-template-columns: 1fr;
+  }
+  .gallery-item .caption {
+    font-size: 0.9rem;
+  }
+  #cta-about {
+    padding: 40px 5%;
+  }
+  #cta-about h2 {
+    font-size: 26px;
+  }
+  #cta-about p {
+    font-size: 16px;
+  }
+}
