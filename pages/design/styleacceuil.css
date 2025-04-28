@@ -73,7 +73,7 @@ header ul li a:hover {
 /* HERO SECTION */
 #hero {
   /* On intègre ici l'image insect.avif */
-  background: url('assets/insect.avif') no-repeat center/cover;
+  background: url('../assets/insect.avif') no-repeat center/cover;
   height: 500px;
   position: relative;
   display: flex;

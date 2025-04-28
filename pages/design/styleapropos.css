@@ -76,7 +76,7 @@ header ul li a.active {
 
 /* HERO SECTION */
 #hero-about {
-  background: url('assets/insect.avif') no-repeat center/cover;
+  background: url('../assets/insect.avif') no-repeat center/cover;
   height: 500px;
   position: relative;
   display: flex;

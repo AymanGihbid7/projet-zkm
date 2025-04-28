@@ -75,7 +75,7 @@
   
   /* SECTION HERO CONTACT */
   #hero-contact {
-    background: url('assets/insect.avif') no-repeat center/cover;
+    background: url('../assets/insect.avif') no-repeat center/cover;
     height: 400px;
     position: relative;
     display: flex;

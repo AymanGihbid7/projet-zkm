@@ -73,7 +73,7 @@ header .active {
 /* HERO */
 #hero-desinfection {
   position: relative;
-  background: url('assets/logo.jpg') center/cover no-repeat;
+  background: url('../assets/logo.jpg') center/cover no-repeat;
   height: 500px;
   display: flex; align-items: center; justify-content: center;
   text-align: center; color: var(--white);
